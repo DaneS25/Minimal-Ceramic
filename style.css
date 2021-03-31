@@ -1,35 +1,102 @@
-
-.flex-container{
-    width: 100%;
-    margin-top: 42px;
-    display: inline-block;
-    margin-left: 52px;
-    font-size: 22pt;
+.flex-container {
+  width: 100%;
+  margin-top: 42px;
+  display: inline-block;
+  font-size: 22pt;
 }
-.menuburger{
-    width: 2%;
-    margin-right: 90px;
-    float: right;
+.menuburger {
+  width: 2%;
+  margin-right: 90px;
+  float: right;
 }
-.menuname{
-    font-family: serif;
-    color: #1e1e1c;
-    text-decoration: none;
+.menuname {
+  font-family: serif;
+  color: #1e1e1c;
+  text-decoration: none;
+  margin-left: 52px;
 }
-.mainhead{
-    text-align: center;
-    font-size: 110pt;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    color: #333;
+.mainhead {
+  text-align: center;
+  font-size: 110pt;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  color: #1e1e1c;
+  margin: 0;
+  margin-top: 95px;
 }
-.tomcrew{
-    text-align: center;
-    margin-top: -110px;
-    font-family: 'lato', sans-serif;
-    font-size:15pt;
-    color: black;
+.tomcrew {
+  text-align: center;
+  margin-top: -10px;
+  font-family: "lato", sans-serif;
+  font-size: 15pt;
+  color: black;
 }
-
-
-
+.sidebutton {
+  background-color: black;
+  border: none;
+  color: white;
+  text-decoration: none;
+  text-indent: -75px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "lato", sans-serif;
+  cursor: pointer;
+  transform: translate(100%) rotate(270deg);
+  transform-origin: bottom center;
+}
+.button1 {
+  padding: 16px 82px;
+  float: right;
+}
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+.imageitem {
+  margin: 5px;
+  padding-bottom: 20%;
+}
+.imageitem1 {
+  margin: 5px;
+  padding-top: 20%;
+}
+.button2 {
+  text-align: center;
+  margin-top: -10%;
+}
+.centerbutton {
+  background-color: white;
+  font-family: "lato", Arial, sans-serif;
+  font-size: 45px;
+  line-height: 1.55;
+  font-weight: 100;
+  border: none;
+  color: #75002c;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+}
+.aboutwords1 {
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+}
+.aboutwords2 {
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+}
+.aboutwords3 {
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+}
+.aboutwords4 {
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+}
+.aboutpage {
+  padding-top: 220px;
+}
