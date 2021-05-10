@@ -1,8 +1,44 @@
+#fader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 999999;
+  pointer-events: none;
+  background: white;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#fader.fade-out {
+  opacity: 0;
+  animation-name: fade-out;
+}
+#fader.fade-in {
+  opacity: 1;
+  animation-name: fade-in;
+}
 .flex-container {
   width: 100%;
-  margin-top: 42px;
   display: inline-block;
   font-size: 22pt;
+  position: fixed;
+  margin-top: -128px;
 }
 .menuburger {
   width: 2%;
@@ -10,10 +46,8 @@
   float: right;
 }
 .menuname {
-  font-family: serif;
-  color: #1e1e1c;
-  text-decoration: none;
-  margin-left: 52px;
+  position: sticky;
+  margin-left: 54px;
 }
 .mainhead {
   text-align: center;
@@ -22,7 +56,7 @@
   font-weight: 300;
   color: #1e1e1c;
   margin: 0;
-  margin-top: 95px;
+  margin-top: 175px;
 }
 .tomcrew {
   text-align: center;
@@ -31,22 +65,44 @@
   font-size: 15pt;
   color: black;
 }
-.sidebutton {
-  background-color: black;
-  border: none;
-  color: white;
-  text-decoration: none;
-  text-indent: -75px;
-  font-size: 13px;
-  font-weight: bold;
-  font-family: "lato", sans-serif;
-  cursor: pointer;
-  transform: translate(100%) rotate(270deg);
-  transform-origin: bottom center;
-}
 .button1 {
-  padding: 16px 82px;
+  padding: 10px 72px;
   float: right;
+  position: sticky;
+  top: 400px;
+}
+.sidebutton {
+  position: fixed;
+  position: relative;
+  float: right;
+  top: 300px;
+  writing-mode: vertical-lr;
+  transform: scaleX(-1) scaleY(-1);
+  height: 150px;
+  background-color: black;
+  width: 2.1%;
+}
+.honors {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 10pt;
+  color: white;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+.wlogo {
+  writing-mode:horizontal-tb;
+  transform: scaleZ(-1) scaleY(-1);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+  color: white;
+  margin-top: 120px;
+  margin-left: 6px;
+}
+a {
+  text-decoration: none;
 }
 .image-container {
   display: flex;
@@ -54,49 +110,128 @@
   padding: 3%;
 }
 .imageitem {
-  margin: 5px;
-  padding-bottom: 20%;
+  padding: 5px;
 }
 .imageitem1 {
-  margin: 5px;
-  padding-top: 20%;
+  transform: rotate(-45deg);
+}
+.imageitem2 {
+  transform: rotate(45deg);
+}
+.imageitem, .imageitem1, .imageitem2{
+  width: 75%;
+  height: 55%;
+}
+.centerImage{
+  display: flex;
+  justify-content: center;
 }
 .button2 {
   text-align: center;
-  margin-top: -10%;
 }
 .centerbutton {
+  margin-top: 50px;
   background-color: white;
-  font-family: "lato", Arial, sans-serif;
+  font-family: "Mrs Saint Delafield", cursive;
   font-size: 45px;
   line-height: 1.55;
   font-weight: 100;
   border: none;
   color: #75002c;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
+  transition: 0.2s;
+}
+.centerbutton:hover {
+  transform: scale(1.5);
 }
 .aboutwords1 {
   text-align: center;
   font-size: 100px;
   margin: 0;
 }
+.aboutwords1:hover {
+  color: #75002c;
+}
 .aboutwords2 {
   text-align: center;
   font-size: 100px;
   margin: 0;
+}
+.aboutwords2:hover {
+  color: #75002c;
 }
 .aboutwords3 {
   text-align: center;
   font-size: 100px;
   margin: 0;
 }
+.aboutwords3:hover {
+  color: #75002c;
+}
 .aboutwords4 {
   text-align: center;
   font-size: 100px;
   margin: 0;
 }
+.aboutwords4:hover {
+  color: #75002c;
+}
 .aboutpage {
   padding-top: 220px;
+}
+.item1 {
+  grid-area: header;
+  text-align: center;
+  font-size: 110pt;
+  padding-top: 70px;
+  padding-bottom: 120px;
+  font-weight: 300;
+  color: #1e1e1c;
+  font-family: "Cormorant Garamond", Arial, sans-serif;
+}
+.item2 {
+  grid-area: right;
+  text-align: right;
+  font-size: 60pt;
+  font-family: "Cormorant Garamond", Arial, sans-serif;
+  line-height: 90%;
+}
+.item3 {
+  grid-area: left;
+  text-align: left;
+  font-family: "lato", sans-serif;
+  font-size: 15pt;
+  color: black;
+  line-height: 1.6;
+}
+.grid-container1 {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "right left"
+    "right left";
+}
+.grid-container1 > div {
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.xbutton {
+  width: 1.5%;
+  padding-top: 45px;
+  margin-right: 90px;
+  float: right;
+}
+.cupsimage {
+  padding-top: 70px;
+  width: 100%;
+}
+.line {
+  font-family: "Cormorant Garamond", Arial, sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
 }
