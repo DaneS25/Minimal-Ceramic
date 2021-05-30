@@ -32,9 +32,7 @@
     <script src="fader.js"></script>
     <div class="sidebutton">
       <a href="https://www.awwwards.com/">
-        <div class="honors">
-          Honors 
-        </div>
+        <div class="honors">Honors</div>
         <div class="wlogo">.W</div>
       </a>
     </div>
@@ -53,13 +51,15 @@
       <h1 class="mainhead"><em>Ceramic</em> Tableware</h1>
     </div>
     <div class="tomcrew">created by Tom Crew</div>
-    
+
     <div class="image-container">
-      <div class="centerImage">
-      <img
-        class="imageitem1"
-        src="https://thumb.tildacdn.com/tild3334-3333-4334-b463-356135373033/-/cover/576x475/center/center/-/format/webp/photo_left2x.jpg"/>
-    </div>     
+      <div class="centerImage moveRight">
+        <img
+          id="rotate1"
+          class="imageitem1"
+          src="https://thumb.tildacdn.com/tild3334-3333-4334-b463-356135373033/-/cover/576x475/center/center/-/format/webp/photo_left2x.jpg"
+        />
+      </div>
       <div class="button2">
         <img
           class="imageitem"
@@ -72,15 +72,21 @@
           </button></a
         >
       </div>
-      <div class="centerImage"><img
-        class="imageitem2"
-        src="https://thumb.tildacdn.com/tild3633-6538-4363-b935-653832646137/-/cover/576x475/center/center/-/format/webp/photo_right2x.jpg"/>
+      <div class="centerImage moveLeft">
+        <img
+          onscroll="scrollFunction()"
+          id="rotate2"
+          class="imageitem2"
+          src="https://thumb.tildacdn.com/tild3633-6538-4363-b935-653832646137/-/cover/576x475/center/center/-/format/webp/photo_right2x.jpg"
+        />
       </div>
     </div>
     <div class="grid-container1">
       <div class="item1"><em>Behind</em> The Product</div>
-      <div class="item2">
-        <em>FUNCTIONAL</em><br /><em>& SIMPLE</em><br />FORMS
+      <div class="boxtext">
+        <div class="item2">
+          <em>FUNCTIONAL</em><br /><em>& SIMPLE</em><br />FORMS
+        </div>
       </div>
       <div class="item3">
         This collection is created by Tom Crew. He works with groggy<br />

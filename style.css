@@ -72,7 +72,6 @@
   top: 400px;
 }
 .sidebutton {
-  position: fixed;
   position: relative;
   float: right;
   top: 300px;
@@ -92,7 +91,7 @@
   margin-left: 12px;
 }
 .wlogo {
-  writing-mode:horizontal-tb;
+  writing-mode: horizontal-tb;
   transform: scaleZ(-1) scaleY(-1);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -109,22 +108,35 @@ a {
   justify-content: space-between;
   padding: 3%;
 }
-.imageitem {
-  padding: 5px;
-}
 .imageitem1 {
   transform: rotate(-45deg);
+}
+#rotate1 {
+  width: 75%;
+  height: 55%;
 }
 .imageitem2 {
   transform: rotate(45deg);
 }
-.imageitem, .imageitem1, .imageitem2{
+.imageitem,
+.imageitem1,
+.imageitem2 {
   width: 75%;
   height: 55%;
 }
-.centerImage{
+.centerImage {
   display: flex;
   justify-content: center;
+}
+.moveRight {
+  z-index: -1;
+  margin-right: -800px;
+  margin-left: 200px;
+}
+.moveLeft {
+  z-index: -1;
+  margin-left: -800px;
+  margin-right: 200px;
 }
 .button2 {
   text-align: center;
@@ -146,36 +158,12 @@ a {
 .centerbutton:hover {
   transform: scale(1.5);
 }
-.aboutwords1 {
+.aboutwords {
   text-align: center;
   font-size: 100px;
   margin: 0;
 }
-.aboutwords1:hover {
-  color: #75002c;
-}
-.aboutwords2 {
-  text-align: center;
-  font-size: 100px;
-  margin: 0;
-}
-.aboutwords2:hover {
-  color: #75002c;
-}
-.aboutwords3 {
-  text-align: center;
-  font-size: 100px;
-  margin: 0;
-}
-.aboutwords3:hover {
-  color: #75002c;
-}
-.aboutwords4 {
-  text-align: center;
-  font-size: 100px;
-  margin: 0;
-}
-.aboutwords4:hover {
+.aboutwords:hover {
   color: #75002c;
 }
 .aboutpage {
@@ -193,7 +181,7 @@ a {
 }
 .item2 {
   grid-area: right;
-  text-align: right;
+  text-align: left;
   font-size: 60pt;
   font-family: "Cormorant Garamond", Arial, sans-serif;
   line-height: 90%;
@@ -205,6 +193,11 @@ a {
   font-size: 15pt;
   color: black;
   line-height: 1.6;
+  margin-right: 200px;
+}
+.boxtext {
+  margin-left: 400px;
+  text-align: left;
 }
 .grid-container1 {
   display: grid;
@@ -231,7 +224,7 @@ a {
 .line {
   font-family: "Cormorant Garamond", Arial, sans-serif;
 }
-*{
+* {
   margin: 0;
   padding: 0;
 }
