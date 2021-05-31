@@ -1,4 +1,4 @@
-fetch('https://api.unsplash.com/search/photos?page=1&query=urn&client_id=E68wcm3WSx6iTVJQX-sQfOfKwkyj2pa-v2ZFtxfo5go')
+fetch('https://api.unsplash.com/search/photos?per_page=28&query=ceramic&client_id=E68wcm3WSx6iTVJQX-sQfOfKwkyj2pa-v2ZFtxfo5go')
 .then(res => {
     return res.json();
 })
@@ -11,7 +11,7 @@ function makeFirstSectionImageRow(data){
   console.log();
   let images = [];
   let imageId = [];
-  for(i = 0; i < 9; i++){
+  for(i = 0; i < 28; i++){
       images[i] = document.createElement("img");
       images[i].src = data.results[i].urls.regular; 
       imageId[i] = document.getElementById(`p${i + 1}`)

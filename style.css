@@ -224,22 +224,31 @@ a {
 .line {
   font-family: "Cormorant Garamond", Arial, sans-serif;
 }
-.img-row{
-  display: flex;
+.img-row {
+  display: block;
   flex-wrap: wrap;
   justify-content: space-around;
-  vertical-align: middle;
+  column-count: 3;
+  margin-left: 140px;
 }
-.img-row-item{
-  width: 30%;
+.img-row-item {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  width: 75%;
 }
-.img-row-item img{
+.img-row-item img {
   max-width: 100%;
-  border-radius: 2%;
   box-shadow: 5px 10px 8px #888888;
   margin-top: 50px;
+  grid-row: 1 / -1;
+  grid-column: 1;
 }
-.exitAll{
+.img-row-item :hover {
+  transform: scale(1.2);
+}
+.exitAll {
   margin-top: 50px;
 }
 .xbutton1 {
