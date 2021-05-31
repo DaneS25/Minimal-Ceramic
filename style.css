@@ -224,6 +224,30 @@ a {
 .line {
   font-family: "Cormorant Garamond", Arial, sans-serif;
 }
+.img-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+.img-row-item{
+  width: 30%;
+}
+.img-row-item img{
+  max-width: 100%;
+  border-radius: 2%;
+  box-shadow: 5px 10px 8px #888888;
+  margin-top: 50px;
+}
+.exitAll{
+  margin-top: 50px;
+}
+.xbutton1 {
+  width: 1.5%;
+  padding-top: 25px;
+  margin-right: 90px;
+  float: right;
+}
 * {
   margin: 0;
   padding: 0;

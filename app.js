@@ -25,3 +25,6 @@ function scrollRotate() {
         image2.style.transform = "rotate(0deg)";
     }
 }
+
+  
+
